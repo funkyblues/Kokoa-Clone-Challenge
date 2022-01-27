@@ -15,66 +15,103 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="music-app">
-      <header>
-        <div class="playlist-close">
-          <i class="fas fa-times"></i>
-        </div>
-        <div class="playlist-title">Playlist</div>
-      </header>
-      <div class="now-playing">
-        <div class="now-playing__area">
-          <div class="now-playing__image">
-            <i class="far fa-image"></i>
+    <header>
+      <div class="header-top">
+        <div class="more"><i class="fas fa-bars"></i></div>
+        <div class="title">library</div>
+        <div class="shop"><i class="fas fa-shopping-basket"></i></div>
+      </div>
+      <div class="header-bottom">
+        <input type="text" class="search-box" placeholder="Search books..."">
+        <i class="fas fa-search fa"></i>
+      </div>
+    </header>
+    <div class="book-of-the-day">
+      <div class="book-of-the-day__title">Book of the day</div>
+      <div class="book-of-the-day__description">
+        <div class="book-of-the-day__image"></div>
+        <div class="book-of-the-day__information">
+          <div class="book-of-the-day__name">HTTP 완벽 가이드</div>
+          <div class="book-of-the-day__author">Gourley, David</div>
+          <div class="book-of-the-day__ratings">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
           </div>
-          <div class="now-playing__description">
-            <span class="now-playing__music-title"
-              >Random <br />
-              Love</span
-            >
-            <span class="now-playing__singer">by Divay Kapoor</span>
+          <div class="book-of-the-day__tags">
+            <div class="book-of-the-day__tag">
+              <input type="submit" value="IT/Mobile"></input>
+            </div>
+            <div class="book-of-the-day__tag">
+              <input type="submit" value="Network"></input>
+            </div>
           </div>
-        </div>
-        <div class="now-playing__btns">
-          <div class="now-playing__play">
-            <i class="fas fa-play"></i>
-            <span>play</span>
-          </div>
-          <div class="now-playing__love">
-            <i class="far fa-heart"></i>
-          </div>
-          <div class="now-playing__plus">
-            <i class="fas fa-plus"></i>
+          <div class="book-of-the-day__btns">
+            <div class="book-of-the-day__bookmark">
+              <i class="fas fa-bookmark"></i>
+            </div>
+            <div class="book-of-the-day__booknow">
+              <input type="submit" value="Book Now"></input>
+            </div>
           </div>
         </div>
       </div>
-      <div class="musics">
-        <div class="musics-first">
-          <div class="musics-first__image"></div>
-          <div class="musics-first__description">
-            <span>Matargasti</span>
-            <span>Mohit Chauhan</span>
+    </div>
+    <div class="top-adventures">
+      <div class="top-adventures__title">Top Adventures</div>
+      <div class="top-adventures__poster">
+        <div class="nodejs">
+          <div class="ratings">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
           </div>
         </div>
-        <div class="musics-second">
-          <div class="musics-second__image"></div>
-          <div class="musics-second__description">
-            <span>Attitude</span>
-            <span>Lewis OfMan Attitude</span>
+        
+        <div class="network">
+          <div class="ratings">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
           </div>
         </div>
-        <div class="musics-third">
-          <div class="musics-third__image"></div>
-          <div class="musics-third__description">
-            <span>Try Everything</span>
-            <span>Shakira Zootopia</span>
+        
+        <div class="nico-clone">
+          <div class="ratings">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
           </div>
         </div>
-        <div class="musics-fourth">
-          <div class="musics-fourth__image"></div>
-          <div class="musics-fourth__description">
-            <span>Sunflower</span>
-            <span>Joseph Vincent Sunflower</span>
+        
+        <div class="javascript">
+          <div class="ratings">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="popular-authors">
+      <div class="popular-authors__title">Popular authors</div>
+      <div class="popular-authors__description">
+        <div class="popular-authors__image"></div>
+        <div class="popular-authors__information">
+          <div class="popular-authors__name">Changuk Woo</div>
+          <div class="popular-authors__biography">
+            <span>M.S. Course in SungKyunKwan University, majoring in Civil, Architectural and Environmental Systems Engineering</span>
           </div>
         </div>
       </div>

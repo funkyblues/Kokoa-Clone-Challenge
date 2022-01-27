@@ -1,339 +1,313 @@
-@font-face {
-  font-family: "Spoqa Han Sans";
-  font-weight: 700;
-  src: local("Spoqa Han Sans Bold"),
-    url("../fonts/SpoqaHanSans/SpoqaHanSansBold.woff2") format("woff2"),
-    url("../fonts/SpoqaHanSans/SpoqaHanSansBold.woff") format("woff"),
-    url("../fonts/SpoqaHanSans/SpoqaHanSansBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Spoqa Han Sans";
-  font-weight: 400;
-  src: local("Spoqa Han Sans Regular"),
-    url("../fonts/SpoqaHanSans/SpoqaHanSansRegular.woff2") format("woff2"),
-    url("../fonts/spoqa-han-sans/SpoqaHanSans/SpoqaHanSansRegular.woff")
-      format("woff"),
-    url("../fonts/spoqa-han-sans/SpoqaHanSans/SpoqaHanSansRegular.ttf")
-      format("truetype");
-}
-
-@font-face {
-  font-family: "Spoqa Han Sans";
-  font-weight: 300;
-  src: local("Spoqa Han Sans Light"),
-    url("../fonts/SpoqaHanSans/SpoqaHanSansLight.woff2") format("woff2"),
-    url("../fonts/SpoqaHanSans/SpoqaHanSansLight.woff") format("woff"),
-    url("../fonts/SpoqaHanSans/SpoqaHanSansLight.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Spoqa Han Sans";
-  font-weight: 100;
-  src: local("Spoqa Han Sans Thin"),
-    url("../fonts/SpoqaHanSans/SpoqaHanSansThin.woff2") format("woff2"),
-    url("../fonts/SpoqaHanSans/SpoqaHanSansThin.woff") format("woff"),
-    url("../fonts/SpoqaHanSans/SpoqaHanSansThin.ttf") format("truetype");
-}
 * {
   box-sizing: border-box;
-  font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans JP", "sans-serif";
 }
 
-body {
-  width: 100%;
-  height: 1200px;
-  background-color: #fff;
-}
-
-.music-app {
-  width: 584px;
-  height: 1200px;
-  background-clip: content-box;
-  border: 5px solid #00c6ad;
-  position: relative;
+html {
+  width: 400px;
 }
 
 header {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: relative;
 }
 
-.playlist-close {
-  position: absolute;
-  top: 100px;
-  left: 43px;
-}
-
-.playlist-close i {
-  font-size: 36px;
-}
-
-.playlist-title {
-  position: absolute;
-  top: 100px;
-  font-size: 36px;
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
   font-weight: 700;
-  left: 50%;
-  transform: translate(-50%);
+  background-color: #ffce33;
+  padding: 30px 10px 60px 10px;
 }
 
-.now-playing {
+.header-top i {
+  cursor: pointer;
+}
+
+.header-bottom {
   position: absolute;
+  top: 85px;
+  left: 10px;
+}
+
+.header-bottom input {
+  padding: 0px 40px;
+  background-color: #fff;
+  border-style: none;
+  border-radius: 25px;
+  width: 380px;
+  height: 50px;
+  box-shadow: 0px 5px 10px #f5f5f5;
+}
+
+.header-bottom i {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  opacity: 0.2;
+}
+
+.header-bottom input::placeholder {
+  opacity: 0.3;
+  font-weight: 700;
+}
+
+.header-bottom input:focus {
+  outline: none;
+}
+
+.book-of-the-day {
+  height: 320px;
   width: 100%;
-  height: 100%;
+  padding: 60px 0px 20px 25px;
 }
 
-.now-playing__area {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.book-of-the-day__title {
+  font-weight: 700;
+  font-size: 24px;
+  padding-bottom: 20px;
 }
 
-.now-playing__image {
-  position: absolute;
-  top: 200px;
-  left: 36px;
-  width: 190px;
-  height: 190px;
-  background-color: #ffbd11;
-  border: 3px solid #000;
-  border-radius: 16px;
+.book-of-the-day__description {
+  display: flex;
 }
 
-.now-playing__image i {
-  position: absolute;
-  font-size: 60px;
+.book-of-the-day__image {
+  background-image: url("./image/http.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  width: 155px;
+  height: 215px;
+}
+
+.book-of-the-day__information {
+  padding-left: 10px;
+}
+
+.book-of-the-day__name {
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.book-of-the-day__author {
+  font-size: 16px;
+  font-weight: 700;
+  opacity: 0.2;
+  padding-bottom: 20px;
+}
+
+.book-of-the-day__ratings {
+  color: #ffd44f;
+  padding-bottom: 30px;
+}
+
+.book-of-the-day__tags {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.book-of-the-day__tag input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  width: 90px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.book-of-the-day__btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-of-the-day__bookmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  background-color: #ffd44f;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.book-of-the-day__booknow input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 5px;
   color: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border-style: none;
 }
 
-.now-playing__description {
-  position: absolute;
-  top: 200px;
-  left: 250px;
+.top-adventures {
+  margin-left: 20px;
 }
 
-.now-playing__music-title {
-  display: block;
-  line-height: 60px;
-  font-weight: 700;
-  font-size: 48px;
-}
-
-.now-playing__singer {
-  display: block;
-  line-height: 60px;
+.top-adventures__title {
   font-weight: 700;
   font-size: 24px;
+  padding: 30px 0 20px 20px;
 }
 
-.now-playing__btns {
-  position: absolute;
-  top: 450px;
-  left: 36px;
-}
-
-.now-playing__play {
-  width: 250px;
-  height: 88px;
-  border: 1px solid #000;
-  border-radius: 20px;
-  border-width: 3px 3px 10px 3px;
-  position: absolute;
-}
-
-.now-playing__play i {
-  position: absolute;
-  top: 23px;
-  left: 70px;
-  font-size: 24px;
-}
-
-.now-playing__play span {
-  position: absolute;
-  top: 12px;
-  left: 110px;
-  font-weight: 700;
-  font-size: 36px;
-}
-
-.now-playing__love {
-  position: absolute;
-  left: 300px;
-  width: 90px;
-  height: 95px;
-  font-size: 32px;
-  border: 1px solid #000;
-  border-radius: 50%;
-  border-width: 3px 3px 10px 3px;
+.top-adventures__poster {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.now-playing__plus {
-  position: absolute;
-  left: 420px;
-  width: 90px;
-  height: 95px;
-  font-size: 32px;
-  border: 1px solid #000;
-  border-radius: 50%;
-  border-width: 3px 3px 10px 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.musics {
-  position: absolute;
-  top: 600px;
-  left: 36px;
-}
-
-.musics-first {
-  position: absolute;
+  overflow-x: auto;
   width: 100%;
-  height: 100%;
+  height: 200px;
 }
 
-.musics-first__image {
-  position: absolute;
-  background-color: #f85a2a;
-  border: 3px solid #000;
-  border-radius: 18px;
-  left: 36px;
-  width: 84px;
-  height: 80px;
+.top-adventures__poster::-webkit-scrollbar {
+  width: 10px;
 }
 
-.musics-first__description {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 137px;
-  top: 8px;
-  font-weight: 700;
-  font-size: 24px;
-  width: 400px;
-  height: 80px;
+.top-adventures__poster::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  border-radius: 10px;
 }
 
-.musics-first__description span:last-child {
-  position: absolute;
-  top: 45px;
-  font-size: 17px;
-  font-weight: 500;
+.top-adventures__poster::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
 }
 
-.musics-second {
+.top-adventures__poster > * {
+  flex: 0 0 auto;
+  display: inline-block;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.ratings {
+  font-size: 12px;
+  color: #ffd44f;
+}
+
+.nodejs {
+  position: relative;
+  background-image: url("./image/nodejs.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110px;
+  height: 150px;
+}
+
+.nodejs .ratings {
   position: absolute;
-  top: 150px;
+  left: 10px;
+  bottom: -23px;
+}
+
+.network {
+  position: relative;
+  background-image: url("./image/network-for-everyone.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110px;
+  height: 150px;
+}
+
+.network .ratings {
+  position: absolute;
+  left: 10px;
+  bottom: -23px;
+}
+
+.nico-clone {
+  position: relative;
+  background-image: url("./image/nico-clone.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110px;
+  height: 150px;
+}
+
+.nico-clone .ratings {
+  position: absolute;
+  left: 10px;
+  bottom: -23px;
+}
+
+.javascript {
+  position: relative;
+  background-image: url("./image/javascript.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110px;
+  height: 150px;
+}
+
+.javascript .ratings {
+  position: absolute;
+  left: 10px;
+  bottom: -23px;
+}
+
+.popular-authors {
   width: 100%;
-  height: 100%;
+  height: 350px;
+  padding: 20px 0px 20px 20px;
 }
 
-.musics-second__image {
-  position: absolute;
-  background-color: #ff89bb;
-  border: 3px solid #000;
-  border-radius: 18px;
-  left: 36px;
-  width: 84px;
-  height: 80px;
-}
-
-.musics-second__description {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 137px;
-  top: 8px;
-  font-weight: 700;
+.popular-authors__title {
   font-size: 24px;
-  width: 400px;
-  height: 80px;
-}
-
-.musics-second__description span:last-child {
-  position: absolute;
-  top: 45px;
-  font-size: 17px;
-  font-weight: 500;
-}
-
-.musics-third {
-  position: absolute;
-  top: 300px;
-  width: 100%;
-  height: 100%;
-}
-
-.musics-third__image {
-  position: absolute;
-  background-color: #1947e5;
-  border: 3px solid #000;
-  border-radius: 18px;
-  left: 36px;
-  width: 84px;
-  height: 80px;
-}
-
-.musics-third__description {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 137px;
-  top: 8px;
   font-weight: 700;
-  font-size: 24px;
-  width: 400px;
-  height: 80px;
+  margin-bottom: 30px;
 }
 
-.musics-third__description span:last-child {
-  position: absolute;
-  top: 45px;
-  font-size: 17px;
-  font-weight: 500;
+.popular-authors__image {
+  background-image: url("./image/author.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 230px;
+  border-radius: 10px;
 }
 
-.musics-fourth {
-  position: absolute;
-  top: 450px;
-  width: 100%;
-  height: 100%;
-}
-
-.musics-fourth__image {
-  position: absolute;
-  background-color: #00c6ad;
-  border: 3px solid #000;
-  border-radius: 18px;
-  left: 36px;
-  width: 84px;
-  height: 80px;
-}
-
-.musics-fourth__description {
+.popular-authors__description {
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 137px;
-  top: 8px;
-  font-weight: 700;
-  font-size: 24px;
-  width: 400px;
-  height: 80px;
 }
 
-.musics-fourth__description span:last-child {
-  position: absolute;
-  top: 45px;
-  font-size: 17px;
-  font-weight: 500;
+.popular-authors__information {
+  margin-left: 20px;
+}
+
+.popular-authors__name {
+  margin-bottom: 10px;
+  width: 200px;
+  height: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.popular-authors__biography {
+  width: 160px;
+  height: 100px;
+  line-height: 25px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.3);
 }
