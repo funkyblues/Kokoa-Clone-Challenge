@@ -1,3 +1,341 @@
 * {
   box-sizing: border-box;
 }
+
+html {
+  background-color: #f3f3f5;
+}
+
+body {
+  display: flex;
+}
+
+.first-page {
+  background-color: #fff;
+  width: 200px;
+  height: 425px;
+  border-radius: 20px;
+  margin: 20px 0px 0px 20px;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+  margin-right: 30px;
+}
+
+.second-page {
+  background-color: #fff;
+  width: 200px;
+  height: 425px;
+  border-radius: 20px;
+  margin: 20px 0px 0px 20px;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+}
+
+.music-playing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-playing__image {
+  margin-top: 40px;
+  background-image: url("./image/artist.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  box-shadow: 2px 10px 20px #caa46f;
+}
+
+.music-playing__title {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.music-playing__artist {
+  margin-top: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.34);
+}
+
+.music-playing__bar {
+  margin-top: 30px;
+  width: 85%;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  position: relative;
+}
+
+.music-playing__bar span:first-child {
+  position: absolute;
+  top: -17px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.music-playing__bar span:last-child {
+  position: absolute;
+  right: 3px;
+  top: -17px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.music-playing__timing {
+  width: 85%;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 2px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px 5px 10px;
+}
+
+header i {
+  font-size: 10px;
+}
+
+.artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artist__image {
+  background-image: url("./image/taeyeon.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.artist__name {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.artist__genre {
+  color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  text-align: center;
+  width: 200px;
+  height: 20px;
+}
+
+.artist__genre span {
+  font-weight: 700;
+  font-size: 0.3em;
+}
+
+.artist--btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 20px;
+}
+
+.artist--btns button {
+  border-style: none;
+  border-radius: 25px;
+  width: 70px;
+  font-size: 10px;
+  padding: 7px 10px 7px;
+}
+
+.artist--shuffle {
+  color: white;
+  background-color: black;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.artist__like {
+  background-color: white;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.3);
+}
+.artist__like i {
+  color: #000;
+}
+
+.artist__playlists {
+  margin-top: 20px;
+  width: 100%;
+  height: 160px;
+}
+
+.artist__first--playlist,
+.artist__second--playlist,
+.artist__third--playlist,
+.artist__fourth--playlist {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding-left: 20px;
+}
+
+.first--playlist__image,
+.second--playlist__image,
+.third--playlist__image,
+.fourth--playlist__image {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.first--playlist__description,
+.second--playlist__description,
+.third--playlist__description,
+.fourth--playlist__description {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 0px 0px 10px;
+  line-height: 13px;
+  width: 30px;
+  height: 30px;
+}
+
+.first--playlist__artist,
+.second--playlist__artist,
+.third--playlist__artist,
+.fourth--playlist__artist {
+  font-size: 5px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.first--playlist__title,
+.second--playlist__title,
+.third--playlist__title,
+.fourth--playlist__title {
+  font-size: 10%;
+  font-weight: 700;
+}
+
+.first--playlist__more,
+.second--playlist__more,
+.third--playlist__more,
+.fourth--playlist__more {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  font-size: 8px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.first--playlist__image {
+  background-image: url("./image/weekend.jfif");
+}
+
+.second--playlist__image {
+  background-image: url("./image/artist.jpg");
+}
+
+.third--playlist__image {
+  background-image: url("./image/I.jfif");
+}
+
+.fourth--playlist__image {
+  background-image: url("./image/fine.jfif");
+}
+
+.now-playing {
+  width: 95%;
+  height: 43px;
+  background-color: #000;
+  margin-left: 5px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.now-playing__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto 0;
+  width: 50px;
+  height: 28px;
+}
+
+.now-playing__artist {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(240, 240, 240, 0.5);
+}
+
+.now-playing__title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.now-playing__btns i:nth-child(2) {
+  font-size: 16px;
+}
+.now-playing__btns {
+  display: flex;
+  color: #fff;
+  font-size: 10px;
+  width: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.second--playlist__image.playing {
+  position: relative;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.second--playlist__image.playing .bar {
+  width: 3px;
+  height: 10px;
+  margin: 0px 1px 7px;
+  background-color: #fff;
+  border-radius: 1.2px;
+  transform-origin: bottom;
+  animation-delay: 0.3s;
+  animation: heightChanger 2.5s ease-in-out infinite;
+}
+
+.second--playlist__image.playing .bar:first-child {
+  animation-delay: 0.5s;
+}
+
+.second--playlist__image.playing .bar:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.second--playlist__image.playing .bar:last-child {
+  animation-delay: 0.1s;
+}
+@keyframes heightChanger {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.6);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
