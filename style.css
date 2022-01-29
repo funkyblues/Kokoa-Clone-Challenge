@@ -70,14 +70,14 @@ body {
   position: relative;
 }
 
-.music-playing__bar span:first-child {
+.music-playing__start-time {
   position: absolute;
   top: -17px;
   font-size: 10px;
   color: rgba(0, 0, 0, 0.2);
 }
 
-.music-playing__bar span:last-child {
+.music-playing__end-time {
   position: absolute;
   right: 3px;
   top: -17px;
@@ -86,10 +86,55 @@ body {
 }
 
 .music-playing__timing {
-  width: 85%;
+  width: 40%;
   height: 3px;
   background-color: rgba(0, 0, 0, 1);
   border-radius: 2px;
+  position: relative;
+}
+
+.music-playing__toggle {
+  position: absolute;
+  top: -1.6px;
+  left: 62px;
+  width: 7px;
+  height: 7px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.music-playing__btns {
+  display: flex;
+  margin-top: 50px;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.music-playing__btns i {
+  font-size: 13px;
+}
+
+.music-playing__btns i:first-child {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.music-playing__playbtn {
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-playing__playbtn .fa-play {
+  background-color: #fff;
+}
+
+.music-playing__btns i:last-child {
+  color: rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -311,7 +356,7 @@ header i {
   height: 10px;
   margin: 0px 1px 7px;
   background-color: #fff;
-  border-radius: 1.2px;
+  border-radius: 0.9px;
   transform-origin: bottom;
   animation-delay: 0.3s;
   animation: heightChanger 2.5s ease-in-out infinite;
